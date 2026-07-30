@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:ital,wght@1,500;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+.accent-word {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12.5px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  border: 1px solid transparent;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--secondary);
+  color: #fff;
+  box-shadow: 0 12px 24px -10px rgba(14, 169, 122, .55);
+}
+
+.btn-primary:hover {
+  background: #0c9169;
+}
+
+.btn-ghost {
+  border-color: rgba(255, 255, 255, .35);
+  color: #fff;
+  background: transparent;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, .08);
+}
+
+.course-card {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px -20px rgba(12, 21, 36, .25);
+}
+
+.nav-link:hover {
+  color: var(--accent) !important;
+}
+
+.nav-link.solid-link:hover {
+  color: var(--primary) !important;
+}
+
+.enroll-link:hover {
+  text-decoration: underline;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: .55; }
+  50% { opacity: 1; }
+}
+
+.node-dot {
+  animation: pulseDot 3.4s ease-in-out infinite;
+}
+
+@media (max-width: 960px) {
+  .hero-grid { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 900px) {
+  .nav-links, .nav-login { display: none !important; }
+  .mobile-toggle { display: inline-flex !important; }
+  .preview-strip { grid-template-columns: 1fr !important; transform: none !important; margin-top: 36px !important; }
+  .course-grid, .why-grid, .test-grid { grid-template-columns: 1fr !important; }
+  .journey-steps { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .journey-line { display: none !important; }
+  .trust-grid { grid-template-columns: 1fr 1fr !important; }
+  .footer-grid { grid-template-columns: 1fr 1fr !important; }
+  .spacer-hero-bottom { height: 40px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
